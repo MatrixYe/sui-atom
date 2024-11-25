@@ -1,6 +1,6 @@
 use anyhow::{anyhow, Result};
-use sui_sdk::types::base_types::SuiAddress;
-use sui_sdk::types::crypto::{get_key_pair_from_rng, EncodeDecodeBase64, SuiKeyPair};
+use sui_types::base_types::SuiAddress;
+use sui_types::crypto::{get_key_pair, EncodeDecodeBase64, SuiKeyPair};
 
 
 // 从私钥中导入keypair
@@ -16,7 +16,7 @@ fn import_keypair_from_private_key(private_key_str: &str) -> Result<SuiKeyPair> 
 
 // 生成随机的keypair
 fn generate_random_keypair() -> Result<SuiKeyPair> {
-    let kp = SuiKeyPair::Ed25519(get_key_pair_from_rng(&mut rand::rngs::OsRng).1);
+    let kp = SuiKeyPair::Ed25519(get_key_pair().1);
     Ok(kp)
 }
 

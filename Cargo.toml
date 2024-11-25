@@ -4,35 +4,38 @@ name = "sui-atom"
 version = "0.1.0"
 
 [dependencies]
-anyhow = "1.0.0"
 futures = "0.3.28"
-reqwest = {version = "0.12", default-features = false, features = [
-  "http2",
-  "json",
-  "rustls-tls",
-]}
-serde = {version = "1.0.144", features = ["derive", "rc"]}
+reqwest = { version = "0.12", default-features = false, features = [
+    "http2",
+    "json",
+    "rustls-tls",
+] }
+serde = { version = "1.0.144", features = ["derive", "rc"] }
 serde-env = "0.2.0"
 serde-name = "0.2.1"
 serde-reflection = "0.4.0"
-serde_json = {version = "1.0.95", features = ["preserve_order"]}
+serde_json = { version = "1.0.95", features = ["preserve_order"] }
 serde_repr = "0.1"
 serde_test = "1.0.147"
 serde_with = "3.8"
-sui_sdk = {git = "https://github.com/mystenlabs/sui", package = "sui-sdk"}
-tokio = {version = "1.2", features = ["full"]}
+anyhow = "1.0.0"
+sui_sdk = { git = "https://github.com/mystenlabs/sui", package = "sui-sdk" }
+shared_crypto = { git = "https://github.com/mystenlabs/sui", package = "shared-crypto" }
+sui_keys = { git = "https://github.com/mystenlabs/sui", package = "sui-keys" }
+sui_types = { git = "https://github.com/mystenlabs/sui", package = "sui-types" }
+tokio = { version = "1.2", features = ["full"] }
 tracing = "0.1.37"
 tracing-appender = "0.2.2"
-tracing-subscriber = {version = "0.3.15", default-features = false, features = [
-  "std",
-  "smallvec",
-  "fmt",
-  "ansi",
-  "time",
-  "json",
-  "registry",
-  "env-filter",
-]}
+tracing-subscriber = { version = "0.3.15", default-features = false, features = [
+    "std",
+    "smallvec",
+    "fmt",
+    "ansi",
+    "time",
+    "json",
+    "registry",
+    "env-filter",
+] }
 # serde_yaml = "0.9.21"
 serde_yaml = "0.9.34"
 rand = "0.8.5"

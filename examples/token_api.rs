@@ -1,6 +1,6 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
-/// 演示如何获取Coin的信息，以及
+/// 演示如何获取Coin的信息，以及钱包地址的代币余额
 ///
 ///
 ///
